@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi familia</title>
+    <style>
+      table,
+      td,
+      tr {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Mi familia</h2>
+    <table cellspacing="0">
+      <tr>
+        <td><b>Nombre</b></td>
+        <td><b>Edad</b></td>
+        <td><b>Nacimiento</b></td>
+      </tr>
+      {% for familiar in lista_familia %}
+        <tr>
+          <td>{{familiar.nombre}}</td>
+          <td>{{familiar.edad}}</td>
+          <td>{{familiar.fecha_nacimiento}}</td>
+        </tr>
+      {% endfor %}
+    </table>
+    <br></br>
+    <a href="../inicio" name="button" class="btn btn-success">
+      >> Inicio</a>
+      <br></br>
+    <a href="../consigna" name="button" class="btn btn-success">
+      >> Consigna</a>
+      <br></br>
+    <a href="." name="button" class="btn btn-success">
+      >> Familia</a>
+      <br></br>
+    <a href="../agregar_familiar" name="button" class="btn btn-success">
+      >> Agregar familiar (Al azar) </a>
+      
+  </body>
+</html>
